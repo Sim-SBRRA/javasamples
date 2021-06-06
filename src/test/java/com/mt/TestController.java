@@ -1,4 +1,4 @@
-package com.java.samples;
+package com.mt;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -10,19 +10,19 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import com.java.samples.App;
+import com.mt.HelloWorldController;
 
 public class TestController {
 
 	@InjectMocks
-	private App app;
+	private HelloWorldController helloWorldController;
 
 	private MockMvc mockMvc;
 
 	@Before
 	public void setup() {
 		MockitoAnnotations.initMocks(this);
-		this.mockMvc = MockMvcBuilders.standaloneSetup(app).build();
+		this.mockMvc = MockMvcBuilders.standaloneSetup(helloWorldController).build();
 	}
 
 	@Test
