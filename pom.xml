@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.java.samples</groupId>
   <artifactId>javasamples</artifactId>
-  <packaging>jar</packaging>
+  <packaging>war</packaging>
   <version>1</version>
   <name>javasamples</name>
   <url>http://maven.apache.org</url>
