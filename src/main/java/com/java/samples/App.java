@@ -1,13 +1,20 @@
 package com.java.samples;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
-    }
-}
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+@RequestMapping("/")
+public class App {
+
+		@RequestMapping(method = RequestMethod.GET)
+		public String hello(ModelMap model) {
+
+			model.addAttribute("name", " Hello World!");
+			return "home";
+
+		}
+		
+	}
